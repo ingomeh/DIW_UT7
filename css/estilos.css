@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/* Variables con colores */
+/* Variables para encabezados */
+/* Mixin par los encabezados*/
+/* Mixin para posicionar los logos en el grid*/
+/* Mixin para media-queries*/
+/* Resetear valores*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL PROYECTO*/
+/* Estilos de párrafos */
+p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* Estilos de encabezados */
+/* Estilos específicos para h1 */
+h1 {
+  line-height: normal;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #002438;
+  font-family: "Monserrat", sans-serif;
+}
+
+/* Estilos específicos para h2 */
+h2 {
+  line-height: normal;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #61a7af;
+  font-family: "Monserrat", sans-serif;
+}
+
+/* Estilos de sección */
+section {
+  padding: 100px 0;
+}
+@media (max-width: 990px) {
+  section {
+    padding: 50px 0;
+  }
+}
+section section {
+  padding: 0;
+}
+
+/* Estilos del video */
+.video {
+  margin: 35px auto;
+  display: block;
+  width: 80%;
+  height: 280px;
+}
+@media (min-width: 990px) {
+  .video {
+    width: 800px;
+    height: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .video {
+    width: 1100px;
+    height: 619px;
+  }
+}
+
+/* REGLAS PARA BLOQUES PRINCIPALES*/
+body {
+  margin: 0;
+  font-family: "Hind", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #002438;
+  background-color: #f5f5f5;
+}
+
+header {
+  min-height: 120px;
+  background-color: #002438;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Estilos del logo*/
+  line-height: normal;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #61a7af;
+  font-family: "Monserrat", sans-serif;
+}
+header .header__logo {
+  height: 80px;
+  width: auto;
+}
+header h1 {
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 0;
+  color: #f5f5f5;
+  font-family: "Monserrat", sans-serif;
+  font-family: Nico Moji;
+}
+
+/* Estilos del bloque main */
+main {
+  padding-top: 50px 100px 50px 100px;
+}
+
+footer {
+  background-color: #002438;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: #f5f5f5;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* REGLAS PARA MAQUETADO Y DISEÑO RESPONSIVE*/
+/* La clase .container es un contenedor que ocupa el 100% de la pantalla manteniendo un padding a ambos lados*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (max-width: 990px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 990px) {
+  .flex.no-wrap-small {
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
+}
+
+/*ESTILOS PARTICULARES*/
+/* Seccion "gestion integral"*/
+.gestion-integral {
+  background-color: #61a7af;
+}
+.gestion-integral h1, .gestion-integral h2 {
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+  font-family: "Monserrat", sans-serif;
+}
+.gestion-integral .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding-top: 50px;
+}
+.gestion-integral .grid .gestion__logo {
+  width: 13%;
+}
+@supports (display: grid) {
+  @media (min-width: 990px) {
+    .gestion-integral .grid {
+      height: 800px;
+      display: grid;
+      grid-template-columns: 2fr 0.5fr 2fr 0.5fr 3fr 0.5fr 2fr 0.5fr 2fr;
+      grid-template-rows: 15% 5% 20% 20% 20% 5% 15%;
+      padding-left: 100px;
+      padding-right: 100px;
+      gap: 0;
+    }
+    .gestion-integral .grid .img_gestion {
+      height: 500px;
+      grid-column: 5/6;
+      grid-row: 3/6;
+      margin: auto;
+    }
+    .gestion-integral .grid .gestion__logo {
+      width: auto;
+      height: 100px;
+      margin: auto;
+      color: #f5f5f5;
+    }
+    .gestion-integral .grid .logo-deporte {
+      grid-column-start: 7;
+      grid-column-end: 8;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .gestion-integral .grid .logo-asistencia {
+      grid-column-start: 9;
+      grid-column-end: 10;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    .gestion-integral .grid .logo-eventos {
+      grid-column-start: 7;
+      grid-column-end: 8;
+      grid-row-start: 7;
+      grid-row-end: 8;
+    }
+    .gestion-integral .grid .logo-perfil {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 7;
+      grid-row-end: 8;
+    }
+    .gestion-integral .grid .logo-notificaciones {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    .gestion-integral .grid .logo-planes {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+}
+
+/* Seccion "img-main"*/
+.main-img {
+  padding: 0;
+}
+.main-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ANIMACIÓN DEL SVG*/
+/* Definir la animación */
+@keyframes animateCircle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Aplicar la animación al círculo */
+.header__logo {
+  animation: animateCircle 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 200px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  50% {
+    bottom: 20px;
+    height: 140px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  55% {
+    bottom: 0px;
+    height: 130px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  65% {
+    bottom: 40px;
+    height: 140px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  95% {
+    bottom: 200px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    bottom: 200px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+.basketball {
+  position: fixed;
+  bottom: 200px;
+  left: 50px;
+  width: 140px;
+  height: 140px;
+  animation: bounce 1.2s infinite;
+}
+@media (max-width: 990px) {
+  .basketball {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
