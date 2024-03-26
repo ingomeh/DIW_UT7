@@ -37,7 +37,7 @@ h2 {
 
 /* Estilos específicos para h3 */
 h3 {
-  color: #61a7af;
+  color: #5198A0;
   font: normal 600 2rem "Monserrat", sans-serif;
   margin-bottom: 15px;
   text-align: center;
@@ -105,7 +105,7 @@ header .header__logo {
 
 /* Estilos del bloque main */
 main {
-  padding-top: 50px 100px 50px 100px;
+  padding: 50px 0;
 }
 
 /* Estilos del footer */
@@ -157,7 +157,7 @@ footer {
 /*ESTILOS PARTICULARES*/
 /* Seccion "gestion integral"*/
 .gestion-integral {
-  background-color: #61a7af;
+  background-color: #5198A0;
   /* Define el comportamiento que tendrá la clase grid cuando no estre soportado el grid o la pantalla sea pequeña*/
   /* Define el comportamiento que tendrá la clase grid cuando este soportado y la pantalla sea suficientemente grande*/
 }

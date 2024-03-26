@@ -2,7 +2,7 @@
 $dark-text-color: #002438;
 $light-text-color: #f5f5f5;
 $main-color: #002438;
-$secondary-color: #61a7af;
+$secondary-color: #5198A0;
 $background-color: #f5f5f5;
 $highlight-color: #f2b077;
 
@@ -84,14 +84,14 @@ p {
 /* Estilos específicos para h1 */
 h1 {
   @include font(
-      $color: $light-text-color,
-      $font-size: $main-header-font-size,
-      $font-weight: $main-header-font-weight,
-      $font-style: normal,
-      $font-family: $logo-font-family
-    );
-    margin-bottom: 0;
-    text-align: center;
+    $color: $light-text-color,
+    $font-size: $main-header-font-size,
+    $font-weight: $main-header-font-weight,
+    $font-style: normal,
+    $font-family: $logo-font-family
+  );
+  margin-bottom: 0;
+  text-align: center;
 }
 
 /* Estilos específicos para h2 */
@@ -173,12 +173,11 @@ header {
     height: 80px;
     width: auto;
   }
-
 }
 
 /* Estilos del bloque main */
 main {
-  padding-top: 50px 100px 50px 100px;
+  padding: 50px 0;
 }
 
 /* Estilos del footer */
@@ -249,8 +248,7 @@ footer {
       $font-family: $header-font-family
     );
   }
-  
-  
+
   /* Define el comportamiento que tendrá la clase grid cuando no estre soportado el grid o la pantalla sea pequeña*/
   .grid {
     display: flex;
